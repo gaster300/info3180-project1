@@ -126,9 +126,9 @@ def profileview(id):
      selected = db.session.query(UserProfile).filter_by(id=id).first()
      image_get = url_for('static', filename='images/'+selected.image)
      if request.method=="POST":
-         return jsonify(id=selected.id, username = selected.username, image = selected.image, gender = selected.sex, age = selected.age, created_on = selected.created_on)
+         return jsonify(id=selected.id, username = selected.username, image = selected.image, gender = selected.gender, age = selected.age, created_on = selected.created_on)
      else:
-         selected_one = {'id':selected.id,'username':selected.username,'image':image_get,'age':selected.age,'firstname':selected.firstname,'lastname':selected.lastname, 'created_on':selected.created_on}
+         selected_one = {'id':selected.id,'usern':selected.username,'image':image_get,'age':selected.age,'firstname':selected.firstname,'lastname':selected.lastname, 'created_on':selected.created_on,'gender':selected.gender,'biography':selected.biography}
          return render_template('profileview.html',selected_one=selected_one)
      
     

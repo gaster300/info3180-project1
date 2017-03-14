@@ -12,7 +12,7 @@ class UserProfile(db.Model):
     created_on=db.Column(db.DateTime)
     
     
-    def __init__(self, id, username, firstname, lastname, age, biography, sex, image, created_on):
+    def __init__(self, id, username, firstname, lastname, age, biography, gender, image, created_on):
         
             self.id=id
             self.username=username
@@ -20,7 +20,7 @@ class UserProfile(db.Model):
             self.lastname=lastname.title()
             self.age=age
             self.biography=biography
-            self.sex = sex.upper()
+            self.gender = gender.upper()
             self.image=image
             self.created_on=created_on
 

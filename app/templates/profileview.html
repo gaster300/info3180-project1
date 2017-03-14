@@ -14,42 +14,20 @@
         </header>
 
     <body>
-        <img src="{{selected_one['image']}}" width="260" height="340">
-        <table>
-        <tbody>
-            
-            <tr>
-                <td>
-                    <h1>{{selected_one['firstname']}} {{selected_one['lastname']}}</h1>
-                </td>
-            </tr>>
-            
-            <tr>
-                <td>
-                    <br>Profile Created On: {{selected_one['created_on']}}
-                </td>
-            </tr>>
-            
-            <tr>
-                <td>
-                    <br>
-                    <br>
-                    <p>Username: {{selected_one['firstname']}} {{selected_one['lastname']}}
-                    <P>User Id: {{selected_one['id']}}
-                    <P>Gender: {{selected_one['sex']}}
-                    <P>Age: {{selected_one['age']}}
-                </td>
-            </tr>>
-            
-            <tr>
-                <td>
-                    <br><p>{{selected_one['biography']}}</p>
-                </td>
-            </tr>>
-            
-        </tbody>
-        </table>
+        <div style="display:inline-block;vertical-align:top;"><img src="{{selected_one['image']}}" width="370" height="340"></div>
+        <div style="display:inline-block;">
+                    <div><h1>&nbsp   {{selected_one['firstname']}} {{selected_one['lastname']}}</h1></div></p>
+                    <div><b>&nbsp&nbsp&nbsp&nbsp&nbsp    Profile Created On:</b> {{selected_one['created_on']}}</div>
+                    <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                    <div><b>&nbsp&nbsp&nbsp&nbsp&nbsp    Username:</b> {{selected_one['usern']}} </div>
+                    <div><b>&nbsp&nbsp&nbsp&nbsp&nbsp    User Id:</b> {{selected_one['id']}}</div>
+                    <div><b>&nbsp&nbsp&nbsp&nbsp&nbsp    Gender:</b> {{selected_one['gender']}}</div>
+                    <div><b>&nbsp&nbsp&nbsp&nbsp&nbsp    Age:</b> {{selected_one['age']}}</div>
+                    <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                    <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                    <div>&nbsp&nbsp&nbsp&nbsp&nbsp   {{selected_one['biography']}}</div>
+        </div></div>
     </body>>
     
     
-{% endblock %}
+{% endblock %}...
