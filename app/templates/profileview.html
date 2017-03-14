@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<head>
+    <title>Profile Page</title>
+    
+    
+</head>
+
+<br>
+        <header>
+            <h1>{{selected_one['firstname']}}'s Profile</h1>
+        </header>
+
+    <body>
+        <img src="{{selected_one['image']}}" width="260" height="340">
+        <table>
+        <tbody>
+            
+            <tr>
+                <td>
+                    <h1>{{selected_one['firstname']}} {{selected_one['lastname']}}</h1>
+                </td>
+            </tr>>
+            
+            <tr>
+                <td>
+                    <br>Profile Created On: {{selected_one['created_on']}}
+                </td>
+            </tr>>
+            
+            <tr>
+                <td>
+                    <br>
+                    <br>
+                    <p>Username: {{selected_one['firstname']}} {{selected_one['lastname']}}
+                    <P>User Id: {{selected_one['id']}}
+                    <P>Gender: {{selected_one['sex']}}
+                    <P>Age: {{selected_one['age']}}
+                </td>
+            </tr>>
+            
+            <tr>
+                <td>
+                    <br><p>{{selected_one['biography']}}</p>
+                </td>
+            </tr>>
+            
+        </tbody>
+        </table>
+    </body>>
+    
+    
+{% endblock %}
